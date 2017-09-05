@@ -1,0 +1,5 @@
+I have created a server which distinguish between Tcp and Udp packet.
+If a packet comes it checks first whether this packet has been received from same 5 ip tuppel parameters ie source ip address,destination ip address,source port no,destination port no and protocol.
+if yes,then it simply update the packet and if not it will insert that packet in hash table.
+if collision occurs it will go to next index as it is using open addressing technique.
+
