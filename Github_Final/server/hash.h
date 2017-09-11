@@ -11,6 +11,7 @@
 #include <time.h>
 #define MAX 1000
 #define SIZE 256
+
 struct packet{
 		char source_ip[SIZE], dest_ip[SIZE];
 		int source_port,dest_port;
