@@ -1,5 +1,32 @@
-I have created a server which distinguish between Tcp and Udp packet.
-If a packet comes it checks first whether this packet has been received from same 5 ip tuppel parameters ie source ip address,destination ip address,source port no,destination port no and protocol.
-if yes,then it simply update the packet and if not it will insert that packet in hash table.
-if collision occurs it will go to next index as it is using linear probing technique.
+This program is related to hashing technique.Hashing technique used here is linear probing.
+
+
+In this program, all the packets are hashed in hash table based on its source ip,destination ip,source port,destination port and protocols.
+If a packet is arrived from same 5 ip tuppels it will update the time stamp.
+
+To lookup for particular packet, send lookup message from client.
+To delete a packet send delete message from client.
+
+To run the server use make to create excutable and the run the excutable
+eg
+make
+./server
+
+To run the client_tcp and client_udp do make and run the executable.
+Also write the ip address and port no to which you have to connect.
+
+make
+./client_tcp <ip_address> <port_no>
+./client_udp <ip_address> <port_no>
+eg
+./client_tcp 192.168.131.32 8888
+
+./client_udp 192.168.131.32 8888
+
+To check for memory leaks enter:
+./client_tcp 192.168.131.32 -v
+
+./client_udp 192.168.131.32 -v
+
+./server -v
 
