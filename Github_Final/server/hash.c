@@ -4,7 +4,7 @@ void insert_packet(struct iptuppel opn[],struct packet *ptr)
 {
 
 
-	/*variable to count no of packets sent*/
+	/*variable to count no of packets arrived*/
 	static int count;
 	int i,index,j,ret;
 	int source_bin;

@@ -1,3 +1,4 @@
+/*client for udp*/
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <stdio.h>
@@ -8,11 +9,7 @@
 #include <string.h>
 #define SIZE 256
 
-/*void err(char *s)
-{
-    perror(s);
-    exit(1);
-}*/
+
 
 int main(int argc, char** argv)
 {

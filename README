@@ -23,7 +23,7 @@ eg
 
 ./client_udp 192.168.131.32 8888
 
-To check for memory leaks enter:
+To check for memory leaks:
 ./client_tcp 192.168.131.32 -v
 
 ./client_udp 192.168.131.32 -v

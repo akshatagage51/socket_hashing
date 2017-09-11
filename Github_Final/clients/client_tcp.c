@@ -1,4 +1,4 @@
-
+/*client for TCP*/
 #include<stdio.h>
 #include<stdlib.h>
 #include <sys/types.h>
@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 		printf("usage : %s <server-ip\n>",argv[0]);
 		exit(0);
 	}
-
+	
 	if((sockfd = socket(AF_INET,SOCK_STREAM,0))==-1)
 		perror("socket");
 

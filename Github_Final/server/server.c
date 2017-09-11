@@ -8,10 +8,12 @@ int main()
         struct sockaddr_in server_address,my_addr,client_address,  cli_addr;
         fd_set readfds,testfds;
 	char ch[SIZE],ip_str[SIZE],ipt_str[SIZE],proto[SIZE],proto_udp[SIZE];
+
 	struct iptuppel opnadd[MAX]={0};
 	struct packet *ptr;
 	/*allocating dynamic memory to pointer*/
 	ptr=(struct packet *)malloc(sizeof(struct packet));
+
 	/*creating TCP socket*/
 	if((server_sockfd=socket(AF_INET,SOCK_STREAM,0))==-1)
 		perror("TCP error\n");
