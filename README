@@ -1,17 +1,17 @@
 This repository is related to hashing technique.Hashing technique used here is linear probing.
 This repository consist of an include folder, a test folder and a source folder.
 Include folder consist of hash.h header file, test folder consist of client programs and
-      source folder consist of server and hash library. 
+source folder consist of server and hash library. 
 
 In this program, all the packets which we receive from clients are hashed in hash table based on its source ip,
-      destination ip,source port,destination port and protocols.
+destination ip,source port,destination port and protocols.
 The packets can be of TCP as well as UDP.In server distinguish between TCP and UDP is done.
 If a packet is arrived from same 5 ip tuppels it will update the time stamp.
 
 The hash library consist of three main functions
 1.insert_packet:- In this function if a packet arrives it will get hash into hashtable.
-                If collision occurs packet will go to next empty location. 
-                And if packet is received from same 5 ip tupples it just update the timestamp.
+                  If collision occurs packet will go to next empty location. 
+                  And if packet is received from same 5 ip tupples it just update the timestamp.
 2.lookup_packet:- In this function if we have to search for a packet then we have to send lookup message from client.
                   If the packet is present function will display its index no its source ip address and 
                   the data present at that location.
