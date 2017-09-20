@@ -1,7 +1,11 @@
-This repository is related to hashing technique.Hashing technique used here is linear probing.
+This repository is related to hashing technique.
+Hashing technique used here is linear probing.
+In linear probing we linearly search the empty index in an array and insert element at that position.
+If collision occurs at that index than the element will be inserted in next empty location of an array.
+
 This repository consist of an include folder, a test folder and a source folder.
-Include folder consist of hash.h header file, test folder consist of client programs and
-source folder consist of server and hash library. 
+Include folder consist of hash.h header file, test folder consist of client and server programs 
+and source folder consist of  hash library. 
 
 In this program, all the packets which we receive from clients are hashed in hash table based on its source ip,
 destination ip,source port,destination port and protocols.
@@ -12,22 +16,27 @@ The hash library consist of three main functions
 1.insert_packet:- In this function if a packet arrives it will get hash into hashtable.
                   If collision occurs packet will go to next empty location. 
                   And if packet is received from same 5 ip tupples it just update the timestamp.
+
 2.lookup_packet:- In this function if we have to search for a packet then we have to send lookup message from client.
                   If the packet is present function will display its index no its source ip address and 
                   the data present at that location.
                   If the packet is not found "packet not found" message will get displayed.
+
 3.delete_packet:- To delete a packet we have to send delete message from client.
                   If packet is present in the hash table it will delete the packet.
 
-To run the server use make to create excutable and the run the excutable
+To run the program use make to create excutable and the run the excutable
+By make all the executables which are required will be created
+
 eg
 make
+
+Run the executable
 ./server
 
-To run the client_tcp and client_udp do make and run the executable.
+To run the client_tcp and client_udp run the executable.
 Also write the ip address and port no to which you have to connect.
 
-make
 ./client_tcp <ip_address> <port_no>
 ./client_udp <ip_address> <port_no>
 eg
@@ -36,11 +45,4 @@ eg
 ./client_udp 192.168.131.32 8888
 
 To lookup and delete a packet send lookup and delete message from client. 
-
-To check for memory leaks:
-./client_tcp 192.168.131.32 -v
-
-./client_udp 192.168.131.32 -v
-
-./server -v
 
